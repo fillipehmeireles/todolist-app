@@ -6,6 +6,6 @@ class AppFonts {
   static Color primaryColor = AppColorPallete.deepBlue;
   static Color secondaryColor = AppColorPallete.smoothGrey;
   static TextStyle primaryFont({TextStyle? textStyle}) {
-    return GoogleFonts.nunito(textStyle: textStyle);
+    return GoogleFonts.montserrat(textStyle: textStyle);
   }
 }
