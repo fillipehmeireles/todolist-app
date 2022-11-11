@@ -20,7 +20,9 @@ class HomeView extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             const Spacer(),
-            const Icon(Icons.settings, color: AppColorPallete.smoothGrey)
+            const IconButton(
+                onPressed: null,
+                icon: Icon(Icons.settings, color: AppColorPallete.smoothGrey))
           ],
         ),
         SecondaryText(
@@ -36,48 +38,29 @@ class HomeView extends StatelessWidget {
             PrimaryCard(
                 titleText: "Work",
                 tasksNumber: 3,
-                icon: const Icon(
-                  Icons.work,
-                  color: AppColorPallete.purple,
-                  size: 18,
-                ),
+                icon: Icons.work,
+                iconColor: AppColorPallete.purple,
                 boxColor: AppColorPallete.lightPurple),
             PrimaryCard(
                 titleText: "Personal",
                 tasksNumber: 2,
-                icon: const Icon(
-                  Icons.person,
-                  color: AppColorPallete.blueAccent,
-                  size: 18,
-                ),
+                icon: Icons.person,
+                iconColor: AppColorPallete.blueAccent,
                 boxColor: AppColorPallete.lightBlue),
             PrimaryCard(
                 titleText: "Life",
                 tasksNumber: 8,
-                icon: const Icon(
-                  Icons.favorite,
-                  color: AppColorPallete.pinkAccent,
-                  size: 18,
-                ),
+                icon: Icons.favorite,
+                iconColor: AppColorPallete.pinkAccent,
                 boxColor: AppColorPallete.lightPink),
             PrimaryCard(
                 titleText: "Stroke",
                 tasksNumber: 4,
-                icon: const Icon(
-                  Icons.location_on,
-                  color: AppColorPallete.yellowAccent,
-                  size: 18,
-                ),
+                icon: Icons.location_on,
+                iconColor: AppColorPallete.yellowAccent,
                 boxColor: AppColorPallete.lightYellow),
           ],
         ),
-        const Card(
-          elevation: 1,
-          child: SizedBox(
-            height: 50,
-            child: Icon(Icons.add, color: AppColorPallete.smoothGrey),
-          ),
-        )
       ],
     );
   }

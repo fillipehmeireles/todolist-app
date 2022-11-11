@@ -7,10 +7,12 @@ class PrimaryCard extends Card {
       {super.key,
       required String titleText,
       required int tasksNumber,
-      required Icon icon,
+      required IconData icon,
+      required Color iconColor,
       required Color boxColor})
       : super(
             elevation: 2,
+            margin: const EdgeInsets.all(10),
             child: SizedBox(
                 width: 160,
                 height: 170,
@@ -23,7 +25,11 @@ class PrimaryCard extends Card {
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle, color: boxColor),
-                        child: icon),
+                        child: Icon(
+                          icon,
+                          color: iconColor,
+                          size: 18,
+                        )),
                     PrimaryText(
                       text: titleText,
                       fontWeight: FontWeight.bold,
