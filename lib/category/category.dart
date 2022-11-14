@@ -26,9 +26,12 @@ class Category extends StatelessWidget {
           ),
           centerTitle: true,
           actions: const [
-            Icon(
-              Icons.person,
-              color: AppColorPallete.deepBlue,
+            Padding(
+              padding: EdgeInsets.only(right: 12),
+              child: Icon(
+                Icons.person,
+                color: AppColorPallete.deepBlue,
+              ),
             )
           ],
           backgroundColor: Colors.transparent,

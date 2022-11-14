@@ -7,11 +7,13 @@ class SecondaryText extends Text {
       {super.key,
       required String text,
       double? fontSize,
-      FontWeight? fontWeight})
+      FontWeight? fontWeight,
+      FontStyle? fontStyle})
       : super(text,
             style: AppFonts.primaryFont(
                 textStyle: TextStyle(
                     fontSize: fontSize,
                     fontWeight: fontWeight,
-                    color: AppFonts.secondaryColor)));
+                    color: AppFonts.secondaryColor,
+                    fontStyle: fontStyle)));
 }

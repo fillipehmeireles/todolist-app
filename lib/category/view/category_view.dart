@@ -1,5 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 import 'package:todoapp/appstyle/color_palette.dart';
+import 'package:todoapp/widgets/cards/primary_list_card.dart';
 import 'package:todoapp/widgets/text/primary_text.dart';
 import 'package:todoapp/widgets/text/secondary_text.dart';
 
@@ -14,22 +18,16 @@ class CategoryView extends StatelessWidget {
     return ListView(
       children: [
         const _AddEventsView(),
-        Card(
-          elevation: 1,
-          child: CheckboxListTile(
-            value: false,
-            onChanged: null,
-            title: PrimaryText(
-              text: "Combing the hole design process",
-              fontSize: 22,
-            ),
-            subtitle: SecondaryText(text: "Design"),
-            controlAffinity: ListTileControlAffinity.leading,
-            checkboxShape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100),
-                side: BorderSide(color: categoryColor)),
-            checkColor: categoryColor,
-          ),
+        PrimaryListCard(
+          title: 'Combining the hole design process',
+          category: 'Design',
+          datetime: '15:10 PM',
+        ),
+        const Padding(padding: EdgeInsets.all(2)),
+        PrimaryListCard(
+          title: 'Combining the hole design process',
+          category: 'Design',
+          datetime: '15:10 PM',
         )
       ],
     );
